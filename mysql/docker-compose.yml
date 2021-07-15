@@ -9,8 +9,8 @@ services:
             - "3306:3306"
         environment:
             MYSQL_ROOT_PASSWORD: root
-            MYSQL_ROOT_HOST: "%"
+            MYSQL_ROOT_HOST: '%'
             TZ: Asia/Shanghai
         volumes:
             - "./data:/var/lib/mysql"
-            - "./config:/etc/mysql/conf.d"
+            - "./config/my.cnf:/etc/my.cnf"
