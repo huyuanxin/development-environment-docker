@@ -1,17 +1,19 @@
 version: "3"
 services:
     rabbitmq:
-        container_name: RabbitMQ
+        container_name: rabbitmq
         environment:
-            RABBITMQ_DEFAULT_USER: root
-            RABBITMQ_DEFAULT_PASS: root
-        image: "rabbitmq"
+            RABBITMQ_DEFAULT_USER: guest
+            RABBITMQ_DEFAULT_PASS: guest
+        image: "rabbitmq:management"
         restart: always
         volumes:
          - "./data:/var/lib/rabbitmq"
          - "./log:/var/log/rabbitmq/log"
         ports:
-         - "15672:15672"
-         - "4369:4369"
-         - "5672:5672"
-         - "25672:25672"
+            - 15672:15672
+            - 4369:4369
+            - 5671:5671
+            - 5672:5672
+            - 25672:25672
+            - 15671:15671
