@@ -2,9 +2,6 @@ version: "3"
 services:
     rabbitmq:
         container_name: rabbitmq
-        environment:
-            RABBITMQ_DEFAULT_USER: guest
-            RABBITMQ_DEFAULT_PASS: guest
         image: "rabbitmq:management"
         restart: always
         volumes:
